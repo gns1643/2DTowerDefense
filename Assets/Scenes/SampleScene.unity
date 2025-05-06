@@ -3476,6 +3476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPrefab: {fileID: 1380364110371783096, guid: 64567557a80eae74ba7b631922426aa5, type: 3}
+  enemySpawner: {fileID: 1696170905}
 --- !u!4 &1137394778
 Transform:
   m_ObjectHideFlags: 0
