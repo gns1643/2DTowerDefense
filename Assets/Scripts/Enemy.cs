@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EnemyDestroyType { Kill = 0, Arrive}
+
 public class Enemy : MonoBehaviour
 {
     private int wayPointCount;           // 이동 경로 개수
@@ -64,11 +66,11 @@ public class Enemy : MonoBehaviour
         else
         {
             // 적 오브젝트 삭제
-            OnDie();
+            OnDie(EnemyDestroyType.Arrive);
         }
     }
-    public void OnDie()
+    public void OnDie(EnemyDestroyType type)
     {
-        enemySpawner.DestroyEnemy(this);
+        enemySpawner.DestroyEnemy(type, this);
     }
 }
